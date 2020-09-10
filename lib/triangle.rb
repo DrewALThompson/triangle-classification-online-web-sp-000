@@ -9,15 +9,17 @@ class Triangle
   end
   
   def kind
-    if @side_one <= 0 && @side_two <= 0 && @side_three <= 0
+    if @side_one <= 0 || @side_two <= 0 || @side_three <= 0
       begin
        raise TriangleError
-      rescue TriangleError =>
+      rescue TriangleError => error
       
       
   end
   
   class TriangleError < StandardError
-    
+    def error
+      puts "This triangle is invalid."
+    end
   end
 end
