@@ -2,14 +2,15 @@ class Triangle
   
   attr_accessor :side_one, :side_two, :side_three
   
-  def initialize(:length_one, :length_two, :length_three)
-    @length_one = length_one
-    @length_two = length_two
-    @length_three = length_three
+  def initialize(:side_one, :side_two, :side_three)
+    @side_one = side_one
+    @side_two = side_two
+    @side_three = side_three
   end
   
   def kind
-    
+    if @side_one == @side_two == @side_three
+      
   end
   
   class TriangleError < StandardError
