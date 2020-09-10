@@ -13,13 +13,15 @@ class Triangle
       begin
        raise TriangleError
       rescue TriangleError => error
+      puts error.message
+      
       
       
   end
   
   class TriangleError < StandardError
-    def error
-      puts "This triangle is invalid."
+    def message
+      "This triangle is invalid."
     end
   end
 end
